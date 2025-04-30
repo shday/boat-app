@@ -1,15 +1,12 @@
 import streamlit as st
+from datetime import datetime
 
-
-st.title("🎈 My new apple")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
-
-date = st.date_input("Date?",format="DD-MM-YYYY")
-
-st.write(date.strftime("%d-%b-%Y"))
+#date = st.date_input("Date?",format="DD-MM-YYYY")
+if not st.session_state.get('go'):
+    st.markdown(f"## {datetime.now()}")
 
 x = st.multiselect("choose",['a','b','c'],)
 
-st.write(x)
+if st.button("Go!",key='go'):
+    st.write(str(x))
+
