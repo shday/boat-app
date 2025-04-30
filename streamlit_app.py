@@ -1,12 +1,13 @@
 import streamlit as st
 from datetime import datetime
 
+cols = st.columns(2)
 #date = st.date_input("Date?",format="DD-MM-YYYY")
 if not st.session_state.get('go'):
-    st.markdown(f"## {datetime.now()}")
+    cols[0].markdown(f"## {datetime.now()}")
 
-x = st.multiselect("choose",['a','b','c'],)
+x = cols[1].multiselect("choose",['a','b','c'],)
 
-if st.button("Go!",key='go'):
+if cols[1].button("Go!",key='go'):
     st.write(str(x))
 
