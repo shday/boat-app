@@ -32,10 +32,10 @@ if prompt := st.chat_input("What is up?"):
     # Display user message in chat message container
     with st.chat_message("user"):
         st.markdown(prompt)
-    if 'ballon' in prompt:
+    if 'ballon' in prompt.lower():
         st.balloons()
 
-    if 'snow' in prompt:
+    if 'snow' in prompt.lower():
         st.snow()
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
