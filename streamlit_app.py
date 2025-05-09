@@ -17,7 +17,7 @@ def response_generator():
         time.sleep(0.05)
 
 
-st.title("Echo Bot")
+st.title("Steve's Chat Bot")
 
 # Initialize chat history
 if "messages" not in st.session_state:
