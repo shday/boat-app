@@ -11,3 +11,8 @@ x = cols[1].multiselect("choose",['a','b','c'],)
 if cols[1].button("Go!",key='go'):
     st.write(str(x))
 
+if st.button('Ballons'):
+    st.balloons()
+
+if st.button('Snowflakes'):
+    st.snow()
